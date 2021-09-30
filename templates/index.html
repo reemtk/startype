@@ -1,0 +1,54 @@
+<html lang="en">
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predict Star Type Web API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Star Type</h1>
+  <div>
+
+    <p>stars types index :</p>
+    
+    <p>Red Dwarf - 0</p>
+    
+    <p>Brown Dwarf - 1</p>
+    
+    <p>White Dwarf - 2</p>
+
+    <p>Main Sequence - 3</p>
+
+    <p>Super Giants - 4</p>
+
+    <p><p>Super Giants - 4</p>
+    
+    </div>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="\predict" method="post">
+    	<input type="text" name="Temperature (K)" placeholder="Temperature (K)" required="required" />
+        <input type="text" name="Luminosity(L/Lo)" placeholder="Luminosity(L/Lo)" required="required" />
+		<input type="text" name="Radius(R/Ro)" placeholder="Radius(R/Ro)" required="required" />
+        <input type="text" name="Absolute magnitude(Mv)" placeholder="Absolute magnitude(Mv)" required="required" />
+        <input type="text" name="Star color" placeholder="Star color" required="required" />
+        <input type="text" name="Spectral Class" placeholder="Spectral Class" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
